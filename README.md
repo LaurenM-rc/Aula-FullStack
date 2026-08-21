@@ -2,7 +2,7 @@
 
 Repositório destinado ao armazenamento dos **códigos, exercícios e atividades desenvolvidos durante as aulas da disciplina de Full Stack**.
 
-## 📚 Sobre o repositório
+## 📚 Sobre esse repositório
 
 Este repositório é utilizado para acompanhar minha evolução ao longo da disciplina, mantendo registrados os conteúdos e práticas realizados em aula por meio dos commits.
 
