@@ -6,61 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
     <title>Consulta de CEP - ViaCEP</title>
 
 </head>
 
-<body>
+<body class="bg-light">
 
     <div class="container-fluid text-center">
-      
-      <!--Cabeçalho-->
 
-        <div class="row">
-            <div class="col bg-primary text-white p-3">
-                <h1>Consulta de CEP</h1>
-            </div>
-        </div>
+        <!--Cabeçalho-->
+        <header class="bg-primary text-white text-center py-4 shadow-sm">
+            <h1 class="h2 mb-1">Consulta de CEP</h1>
+            <p class="mb-0">Consulte informações de endereço</p>
+        </header>
 
-      <!--Formulário-->
+        <!--Formulário-->
 
         <div class="row mt-5">
 
             <div class="col-3"></div>
             
             <div class="col-6 border rounded p-4 shadow">
-                
-              <h2 class="mb-4">Formulário</h2>
+
+                <h2 class="mb-4">Digite o CEP</h2>
 
                 <form id="formCep">
+
                     <div class="form-floating mb-3">
 
-                      <input
-                          type="text"
-                          id="cep"
-                          name="cep"
-                          class="form-control"
-                          placeholder="CEP"
-                          maxlength="9"
-                      required>
+                        <input
+                            type="text"
+                            id="cep"
+                            name="cep"
+                            class="form-control"
+                            placeholder="CEP"
+                            maxlength="9"
+                            autocomplete="postal-code"
+                            required
+                        >
 
-                      <label for="floatingInput">CEP</label>
+                        <label for="floatingInput">CEP</label>
 
-                      <div id="erroCep" class="invalid-feedback">Digite um CEP válido!</div>
-                      
-                      </div>
+                        <div id="erroCep" class="invalid-feedback">
+                            Digite um CEP válido!
+                        </div>
+
+                    </div>
 
                     <input
                         type="submit"
                         value="Consultar"
-                        class="btn btn-success">
+                        class="btn btn-success"
+                    >
 
                     <button
                         type="button"
                         id="limpar"
-                        class="btn btn-danger">
+                        class="btn btn-danger"
+                    >
                         Limpar
                     </button>
 
@@ -75,78 +90,100 @@
                     <div class="row">
 
                         <div class="form-floating col-md-12 mb-3">
-                          
+
                             <input
                                 type="text"
                                 id="logradouro"
                                 name="logradouro"
                                 class="form-control"
                                 placeholder="Logradouro"
-                            required>
-                            
-                            <label for="logradouro" class="form-label">Logradouro</label>
+                                required
+                            >
+
+                            <label for="logradouro" class="form-label">
+                                <i class="bi bi-signpost-2 me-1"></i>
+                                Logradouro
+                            </label>
 
                         </div>
 
-                    <div class="row">
+                        <div class="row">
 
-                        <div class="form-floating col-md-6 mb-3">
+                            <div class="form-floating col-md-6 mb-3">
 
-                            <input
-                                type="text"
-                                id="bairro"
-                                name="bairro"
-                                class="form-control"
-                                placeholder="Bairro"
-                            required>
+                                <input
+                                    type="text"
+                                    id="bairro"
+                                    name="bairro"
+                                    class="form-control"
+                                    placeholder="Bairro"
+                                    required
+                                >
 
-                            <label for="bairro" class="form-label">Bairro</label>   
+                                <label for="bairro" class="form-label">
+                                    <i class="bi bi-buildings me-1"></i>
+                                    Bairro
+                                </label>
+
+                            </div>
+
+                            <div class="form-floating col-md-6 mb-3">
+
+                                <input
+                                    type="text"
+                                    id="localidade"
+                                    name="localidade"
+                                    class="form-control"
+                                    placeholder="Cidade"
+                                    required
+                                >
+
+                                <label for="localidade" class="form-label">
+                                    <i class="bi bi-buildings me-1"></i>
+                                    Cidade
+                                </label>
+
+                            </div>
 
                         </div>
 
-                        <div class="form-floating col-md-6 mb-3">
+                        <div class="row">
 
-                          <input
-                              type="text"
-                              id="localidade"
-                              name="localidade"
-                              class="form-control"
-                              placeholder="Cidade"
-                            required>
+                            <div class="form-floating col-md-6 mb-3">
 
-                            <label for="localidade" class="form-label">Cidade</label>
+                                <input
+                                    type="text"
+                                    id="uf"
+                                    name="uf"
+                                    class="form-control"
+                                    placeholder="Estado"
+                                    required
+                                >
 
-                        </div>
+                                <label for="uf" class="form-label">
+                                    <i class="bi bi-map me-1"></i>
+                                    Estado
+                                </label>
 
-                    </div>
+                            </div>
 
-                    <div class="row">
+                            <div class="form-floating col-md-6 mb-3">
 
-                        <div class="form-floating col-md-6 mb-3">
+                                <input
+                                    type="text"
+                                    id="ibge"
+                                    name="ibge"
+                                    class="form-control"
+                                    placeholder="IBGE"
+                                    required
+                                >
 
-                          <input
-                              type="text"
-                              id="uf"
-                              name="uf"
-                              class="form-control"
-                              placeholder="Estado"    
-                            required>
+                                <label for="ibge" class="form-label">
+                                    <i class="bi bi-hash me-1"></i>
+                                    IBGE
+                                </label>
 
-                            <label for="uf" class="form-label">Estado</label>
-                                
-                        </div>
-
-                        <div class="form-floating col-md-6 mb-3">
-
-                            <input
-                                type="text"
-                                id="ibge"
-                                name="ibge"
-                                class="form-control"
-                                placeholder="IBGE"
-                            required>
-
-                            <label for="ibge" class="form-label">IBGE</label>
+                            </div>
 
                         </div>
 
@@ -165,4 +202,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
