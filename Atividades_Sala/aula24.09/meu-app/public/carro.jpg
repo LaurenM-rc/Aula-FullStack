@@ -1,0 +1,4 @@
+// 2. Imagem externa (URL), ou arquivo colocado na pasta public/
+function ImagemExterna() {
+  return <img src="https://exemplo.com/carro.jpg" alt="Carro de luxo" />;
+}
